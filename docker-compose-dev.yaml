@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  # microservices
+
+  api:
+    command: src/index.js
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4000:3000
+    volumes:
+      - ~/repositories/ownersearch/ownersearch-api:/workspace

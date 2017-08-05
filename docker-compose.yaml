@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  # load balancer
+
+#  nginx:
+#    image: nginx
+#    restart: always
+#    labels:
+#      role: nginx
+#    ports:
+#      - 80:80
+
+  # microservices
+
+  api:
+    image: ownersearch-api
+    restart: always
+    environment:
+      NODE_ENV: production
+    labels:
+      role: api
