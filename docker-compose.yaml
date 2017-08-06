@@ -4,13 +4,13 @@ services:
 
   # load balancer
 
-#  nginx:
-#    image: nginx
-#    restart: always
-#    labels:
-#      role: nginx
-#    ports:
-#      - 80:80
+ nginx:
+   image: nginx
+   restart: always
+   labels:
+     role: nginx
+   ports:
+     - 80:80
 
   # microservices
 
