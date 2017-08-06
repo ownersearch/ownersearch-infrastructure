@@ -4,18 +4,18 @@ services:
 
   # load balancer
 
-#  nginx:
-#    image: nginx
-#    restart: always
-#    labels:
-#      role: nginx
-#    ports:
-#      - 80:80
+  nginx:
+    image: gcr.io/ownersearch/nginx
+    restart: always
+    labels:
+      role: nginx
+    ports:
+      - 80:80
 
   # microservices
 
   api:
-    image: ownersearch-api
+    image: gcr.io/ownersearch/api
     restart: always
     environment:
       NODE_ENV: production
