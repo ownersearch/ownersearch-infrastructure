@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    role: nginx
+  type: LoadBalancer
+  loadBalancerIP: 35.189.63.169
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+  - name: https
+    port: 443
+    targetPort: https
+  - name: wss
+    port: 8443
+    targetPort: wss

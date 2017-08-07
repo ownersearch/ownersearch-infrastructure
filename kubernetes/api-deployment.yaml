@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        role: api
+        keel.observer/policy: all
+    spec:
+      containers:
+      - name: api
+        image: gcr.io/ownersearch/api:latest
+        env:
+        - name: NODE_ENV
+          value: production
+        ports:
+        - name: api
+          containerPort: 3000

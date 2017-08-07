@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kubernetes.io/service-account.name: keel
+  name: keel
+  namespace: kube-system
+  labels:
+      name: keel
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: keel
+      labels:
+        app: keel
+    spec:
+      containers:
+        - image: karolisr/keel:0.4.5
+          env:
+            - name: PUBSUB
+              value: '1'
+            - name: PROJECT_ID
+              value: stemnapp
+          name: keel
+          command: ['/bin/keel']
+          ports:
+            - containerPort: 9300
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 9300
+            initialDelaySeconds: 30
+            timeoutSeconds: 10

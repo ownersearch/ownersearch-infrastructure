@@ -1,0 +1,2 @@
+kubectl logs api --follow --tail 200
+

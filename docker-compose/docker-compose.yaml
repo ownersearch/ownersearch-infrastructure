@@ -21,3 +21,11 @@ services:
       NODE_ENV: production
     labels:
       role: api
+
+  website:
+    image: gcr.io/ownersearch/website-server
+    restart: always
+    environment:
+      NODE_ENV: production
+    labels:
+      role: website

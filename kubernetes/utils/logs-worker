@@ -1,0 +1,1 @@
+kubectl logs --follow $(kubectl get pods | grep worker | cut -b 1-24)

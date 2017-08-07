@@ -1,0 +1,1 @@
+kubectl exec -it $(kubectl get pods | grep api | head -n 1 | cut -b 1-24) ash
