@@ -21,7 +21,7 @@ spec:
             - name: PUBSUB
               value: '1'
             - name: PROJECT_ID
-              value: stemnapp
+              value: ownersearch-176101
           name: keel
           command: ['/bin/keel']
           ports:

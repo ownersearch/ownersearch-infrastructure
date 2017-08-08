@@ -11,9 +11,3 @@ spec:
   - name: http
     port: 80
     targetPort: http
-  - name: https
-    port: 443
-    targetPort: https
-  - name: wss
-    port: 8443
-    targetPort: wss

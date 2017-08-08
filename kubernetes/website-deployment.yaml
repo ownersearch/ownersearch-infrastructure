@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: gcr.io/ownersearch/website-server:latest
+        image: gcr.io/ownersearch-176101/website-server:latest
         ports:
         - name: website
           containerPort: 3080

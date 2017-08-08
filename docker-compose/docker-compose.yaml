@@ -5,7 +5,7 @@ services:
   # load balancer
 
   nginx:
-    image: gcr.io/ownersearch/nginx
+    image: gcr.io/ownersearch-176101/nginx
     restart: always
     labels:
       role: nginx
@@ -15,7 +15,7 @@ services:
   # microservices
 
   api:
-    image: gcr.io/ownersearch/api
+    image: gcr.io/ownersearch-176101/api
     restart: always
     environment:
       NODE_ENV: production
@@ -23,7 +23,7 @@ services:
       role: api
 
   website:
-    image: gcr.io/ownersearch/website-server
+    image: gcr.io/ownersearch-176101/website-server
     restart: always
     environment:
       NODE_ENV: production
